@@ -24,60 +24,40 @@
 示例
 
 ```
-输入关键词就行搜索:
-=> 网络歌曲榜
-┏━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃  # ┃ TITLE                ┃ SINGER       ┃ FORMAT ┃ SIZE(M) ┃ ALBUM                                 ┃
-┣━━━━╋━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━╋━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
-┃  0 ┃ 对你说               ┃ 半吨兄弟     ┃ flac   ┃      49 ┃ 《对你说》                            ┃
-┃  1 ┃ 长大成人             ┃ 范茹         ┃ flac   ┃      42 ┃ 《长大成人》                          ┃
-┃  2 ┃ 平凡日子里的挣扎     ┃ 曾抖抖       ┃ flac   ┃      38 ┃ 《平凡日子里的挣扎》                  ┃
-┃  3 ┃ 同床知己             ┃ L（桃籽）    ┃ flac   ┃      35 ┃ 《同床知己》                          ┃
-┃  4 ┃ 爱似水仙(合唱版)     ┃ 张茜         ┃ flac   ┃      46 ┃ 《爱似水仙》                          ┃
-┃  5 ┃ 我来人间一趟         ┃ 魏佳艺       ┃ flac   ┃      29 ┃ 《我来人间一趟》                      ┃
-┃  6 ┃ 迟来的爱(新版)       ┃ 金润吉       ┃ flac   ┃      39 ┃ 《迟来的爱（新版）》                  ┃
-┃  7 ┃ 都怪我不配           ┃ 烟(许佳豪)   ┃ flac   ┃      23 ┃ 《都怪我不配》                        ┃
-┃  8 ┃ 爱你爱的好疲惫       ┃ 半吨兄弟     ┃ flac   ┃      54 ┃ 《爱你爱的好疲惫》                    ┃
-┃  9 ┃ 我看上的姑娘         ┃ 杨小壮       ┃ flac   ┃      45 ┃ 《我看上的姑娘》                      ┃
-┃ 10 ┃ 爱的迷魂汤           ┃ 花姐         ┃ flac   ┃      32 ┃ 《爱的迷魂汤》                        ┃
-┃ 11 ┃ 心要让你听见         ┃ 半吨兄弟     ┃ flac   ┃      48 ┃ 《心要让你听见》                      ┃
-┃ 12 ┃ 爱情主演             ┃ 半吨兄弟     ┃ flac   ┃      47 ┃ 《爱情主演》                          ┃
-┃ 13 ┃ 此去半生             ┃ L（桃籽）    ┃ flac   ┃      37 ┃ 《此去半生》                          ┃
-┃ 14 ┃ 爱不得忘不舍         ┃ 白小白       ┃ flac   ┃      28 ┃ 《爱不得忘不舍》                      ┃
-┃ 15 ┃ 我们终究是错过       ┃ 白小白       ┃ flac   ┃      22 ┃ 《我们终究是错过》                    ┃
-┃ 16 ┃ 别怕我伤心           ┃ 半吨兄弟     ┃ flac   ┃      46 ┃ 《别怕我伤心》                        ┃
-┃ 17 ┃ 死心塌地去爱你       ┃ 怪阿姨       ┃ flac   ┃      44 ┃ 《死心塌地去爱你》                    ┃
-┃ 18 ┃ 别说我的眼泪你无所谓 ┃ 半吨兄弟     ┃ flac   ┃      48 ┃ 《别说我的眼泪你无所谓》              ┃
-┃ 19 ┃ 今天(婚礼版)         ┃ 贺泽坤       ┃ flac   ┃      50 ┃ 《今天(婚礼版)》                      ┃
-┃ 20 ┃ 言而无信             ┃ 安儿陈       ┃ flac   ┃      56 ┃ 《言而无信》                          ┃
-┃ 21 ┃ 晴天                 ┃ 周杰伦       ┃ flac   ┃      29 ┃ 《叶惠美》                            ┃
-┃ 22 ┃ 稻香                 ┃ 周杰伦       ┃ flac   ┃      24 ┃ 《魔杰座》                            ┃
-┃ 23 ┃ 七里香               ┃ 周杰伦       ┃ flac   ┃      34 ┃ 《七里香》                            ┃
-┃ 24 ┃ 多远都要在一起       ┃ G.E.M.邓紫棋 ┃ flac   ┃      22 ┃ 《新的心跳》                          ┃
-┃ 25 ┃ 夜曲                 ┃ 周杰伦       ┃ flac   ┃      25 ┃ 《十一月的萧邦》                      ┃
-┃ 26 ┃ 青花瓷               ┃ 周杰伦       ┃ flac   ┃      24 ┃ 《我很忙》                            ┃
-┃ 27 ┃ 有何不可             ┃ 许嵩         ┃ flac   ┃      27 ┃ 《自定义》                            ┃
-┃ 28 ┃ 海阔天空             ┃ BEYOND       ┃ flac   ┃      31 ┃ 《乐与怒》                            ┃
-┃ 29 ┃ 听妈妈的话           ┃ 周杰伦       ┃ flac   ┃      29 ┃ 《依然范特西》                        ┃
-┃ 30 ┃ 等你下课(with杨瑞代) ┃ 周杰伦       ┃ flac   ┃      55 ┃ 《等你下课》                          ┃
-┃ 31 ┃ 美人鱼               ┃ 林俊杰       ┃ flac   ┃      29 ┃ 《第二天堂》                          ┃
-┃ 32 ┃ 江南                 ┃ 林俊杰       ┃ flac   ┃      29 ┃ 《第二天堂》                          ┃
-┃ 33 ┃ 说好的幸福呢         ┃ 周杰伦       ┃ flac   ┃      25 ┃ 《魔杰座》                            ┃
-┃ 34 ┃ 修炼爱情             ┃ 林俊杰       ┃ flac   ┃      31 ┃ 《因你而在》                          ┃
-┃ 35 ┃ 可惜没如果           ┃ 林俊杰       ┃ flac   ┃      32 ┃ 《新地球-人(SpecialEdition)》         ┃
-┃ 36 ┃ 告白气球             ┃ 周杰伦       ┃ flac   ┃      74 ┃ 《周杰伦的床边故事》                  ┃
-┃ 37 ┃ 富士山下             ┃ 陈奕迅       ┃ flac   ┃      26 ┃ 《What'sGoingOn...?(Remastered2019)》 ┃
-┃ 38 ┃ 不能说的秘密         ┃ 周杰伦       ┃ flac   ┃      31 ┃ 《不能说的秘密电影原声带》            ┃
-┃ 39 ┃ 爱都爱了             ┃ 小洲         ┃ flac   ┃      27 ┃ 《爱都爱了》                          ┃
-┃ 40 ┃ 大鱼                 ┃ 周深         ┃ flac   ┃      29 ┃ 《大鱼》                              ┃
-┃ 41 ┃ 不爱我就拉倒         ┃ 周杰伦       ┃ flac   ┃      51 ┃ 《最伟大的作品》                      ┃
-┃ 42 ┃ 水星记               ┃ 郭顶         ┃ flac   ┃      27 ┃ 《水星记》                            ┃
-┃ 43 ┃ 十年                 ┃ 陈奕迅       ┃ flac   ┃      20 ┃ 《黑白灰》                            ┃
-┃ 44 ┃ 偏爱                 ┃ 张芸京       ┃ flac   ┃      24 ┃ 《破天荒》                            ┃
-┃ 45 ┃ 演员                 ┃ 薛之谦       ┃ flac   ┃      24 ┃ 《绅士》                              ┃
-┃ 46 ┃ 春娇与志明           ┃ 街道办GDC    ┃ flac   ┃      23 ┃ 《春娇与志明》                        ┃
-┃ 47 ┃ 庐州月               ┃ 许嵩         ┃ flac   ┃      27 ┃ 《寻雾启示》                          ┃
-┗━━━━┻━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┻━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+输入关键词进行搜索:
+=> Beautiful Girls
+┏━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  # ┃ TITLE                                    ┃ SINGER           ┃ FORMAT ┃ SIZE(M) ┃ ALBUM                                        ┃
+┣━━━━╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━╋━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃  0 ┃ Beautiful Girls (Remix)                  ┃ 小美人           ┃ flac   ┃ 18 MB   ┃ 《Umbrella》                                 ┃
+┃  1 ┃ Beautiful Girls                          ┃ Sean Kingston    ┃ flac   ┃ 27 MB   ┃ 《Me Love》                                  ┃
+┃  2 ┃ Beautiful Girls (降调0.8x)               ┃ 常在梦里的人     ┃ flac   ┃ 13 MB   ┃ 《Love and loved》                           ┃
+┃  3 ┃ Beautiful Girls (Bonus Track)            ┃ 少女时代         ┃ flac   ┃ 30 MB   ┃ 《The 1st Asia Tour Into The New World ...》 ┃
+┃  4 ┃ Beautiful Girls (0.9x)                   ┃ 乔一魚           ┃ flac   ┃ 30 MB   ┃ 《Beautiful Girls》                          ┃
+┃  5 ┃ Beautiful Girl (0.8x)                    ┃ J-I-E            ┃ mp3    ┃ 11 MB   ┃ 《U Make Me》                                ┃
+┃  6 ┃ Beautiful Girls                          ┃ 宇宙无敌小钢蛋   ┃ flac   ┃ 15 MB   ┃ 《我与神明画押堵你心动一刹》                 ┃
+┃  7 ┃ Beautiful Girls (BGM版)                  ┃ 五音旋律         ┃ mp3    ┃ 11 MB   ┃ 《超帅卡点》                                 ┃
+┃  8 ┃ Beautiful Girls                          ┃ DJ新文           ┃ flac   ┃ 13 MB   ┃ 《Bet On Me》                                ┃
+┃  9 ┃ Beautiful Girl                           ┃ Jazz Guitar Club ┃ flac   ┃ 37 MB   ┃ 《Satin: Jazzy Rock Ballads Instrumenta...》 ┃
+┃ 10 ┃ Beautiful Girl                           ┃ DJ铁柱           ┃ mp3    ┃ 11 MB   ┃ 《EA7压迫旋律》                              ┃
+┃ 11 ┃ Beautiful Girl                           ┃ 郭富城           ┃ flac   ┃ 20 MB   ┃ 《对你爱不完》                               ┃
+┃ 12 ┃ beautiful girls (Gustixa Remix)          ┃ fawlin           ┃ flac   ┃ 29 MB   ┃ 《beautiful girls (Gustixa Remix)》          ┃
+┃ 13 ┃ Beautiful Girl (Explicit)                ┃ DJake            ┃ flac   ┃ 18 MB   ┃ 《Beautiful Girl (Explicit)》                ┃
+┃ 14 ┃ Beautiful Girls                          ┃ xxxCr3           ┃ flac   ┃ 11 MB   ┃ 《Ayo》                                      ┃
+┃ 15 ┃ Beautiful Girls                          ┃ Danny Avila      ┃ flac   ┃ 22 MB   ┃ 《Beautiful Girls》                          ┃
+┃ 16 ┃ Beautiful Girls                          ┃ Van Halen        ┃ flac   ┃ 30 MB   ┃ 《Van Halen 2》                              ┃
+┃ 17 ┃ Beautiful Girls (Remix)                  ┃ 刘小蕊           ┃ flac   ┃ 16 MB   ┃ 《Glosses》                                  ┃
+┃ 18 ┃ Beautiful Girls (Re-Recorded)            ┃ Sean Kingston    ┃ flac   ┃ 26 MB   ┃ 《Sean Kingston Hits (2007-2010) (The R...》 ┃
+┃ 19 ┃ BEAUTIFUL GIRL                           ┃ TEEN TOP         ┃ flac   ┃ 29 MB   ┃ 《ROMAN》                                    ┃
+┃ 20 ┃ Beautiful Girls (Originally Performed... ┃ Backing Business ┃ flac   ┃ 27 MB   ┃ 《Pristine Karaoke, Vol. 79》                ┃
+┃ 21 ┃ Beautiful Girls (Live 1994)              ┃ David Lee Roth   ┃ mp3    ┃ 17 MB   ┃ 《Double Stack Thunder (Live 1994)》         ┃
+┃ 22 ┃ Beautiful Girls (0.8X)                   ┃ 冠军             ┃ mp3    ┃ 12 MB   ┃ 《音乐拯救世界》                             ┃
+┃ 23 ┃ Beautiful Girl                           ┃ Inxs             ┃ flac   ┃ 24 MB   ┃ 《Welcome to Wherever You Are》              ┃
+┃ 24 ┃ Beautiful Girls (Andie Roy X Suntimec... ┃ Andie Roy        ┃ mp3    ┃ 13 MB   ┃ 《Beautiful Girls (Andie Roy X Suntimec...》 ┃
+┃ 25 ┃ beautiful girls                          ┃ fawlin           ┃ flac   ┃ 26 MB   ┃ 《beautiful girls》                          ┃
+┃ 26 ┃ Beautiful Girl                           ┃ The Hit Crew     ┃ flac   ┃ 25 MB   ┃ 《R&B Hits of the 80s, 90s and 2000s, V...》 ┃
+┃ 27 ┃ Beautiful Girls (8-Bit Sean Kingston ... ┃ 8-Bit Arcade     ┃ flac   ┃ 24 MB   ┃ 《By Request, Vol. 188》                     ┃
+┗━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━┻━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 
 选择和执行命令
@@ -86,24 +66,46 @@
     比如下载全部:da
     退出循环:q
 
-=> p 0
-2022/08/28 11:47:38 准备播放 对你说-半吨兄弟, 获取链接:   http://ws.stream.qqmusic.qq.com/RS0100207oyA0CLAzl.flac?guid=QMD50&vkey=F56095D626C642AA43181F8E51F95F822D0248433B0A2017256912E625E4C234E16BFB5B268289995B71B0B547FB86D8D3EE37C58A4E478D&uin=350577342&fromtag=140
+=> p 1
+2022/08/28 20:28:40 准备播放 Beautiful Girls-Sean Kingston, 获取链接:   http://ws.stream.qqmusic.qq.com/F000002KECPZ1eg9O9.flac?guid=QMD50&vkey=E789E7D842EACEEA732EC23E83E935CA3A25DF6BCFF35D4A88DEA449D8EE4CAB89BBDDC4A7841C74AB56F0CCA93FB96A843432E2750A52B4&uin=350577342&fromtag=140
+
+=> d 1
+2022/08/28 20:29:41 Downloading: Beautiful Girls-Sean Kingston [27 MB]
+Downloading... 27 MB complete
+已下载:  /Users/zhouyinhui/Music/QQHDMusic/单曲/Beautiful Girls-Sean Kingston.flac
 
 => da
-2022/08/28 11:48:15 Downloading:  对你说-半吨兄弟
-2022/08/28 11:48:15 Downloading:  长大成人-范茹
-2022/08/28 11:48:15 Downloading:  爱似水仙(合唱版)-张茜
-2022/08/28 11:48:15 Downloading:  我看上的姑娘-杨小壮
-2022/08/28 11:48:15 Downloading:  平凡日子里的挣扎-曾抖抖
-2022/08/28 11:48:15 Downloading:  我来人间一趟-魏佳艺
-2022/08/28 11:48:15 Downloading:  同床知己-L（桃籽）
-2022/08/28 11:48:15 Downloading:  迟来的爱(新版)-金润吉
-2022/08/28 11:48:15 Downloading:  都怪我不配-烟(许佳豪)
-2022/08/28 11:48:15 Downloading:  爱你爱的好疲惫-半吨兄弟
-2022/08/28 11:48:27 已下载:  /Users/zhouyinhui/Music/QQHDMusic/网络歌曲榜-2022.08.28/迟来的爱(新版)-金润吉.flac
-2022/08/28 11:48:27 已下载:  /Users/zhouyinhui/Music/QQHDMusic/网络歌曲榜-2022.08.28/同床知己-L（桃籽）.flac
-..........
-2022/08/28 11:50:31 DOWNLOAD ALL DONE
+2022/08/28 20:29:53 Downloading: Beautiful Girls-Sean Kingston [27 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls (BGM版)-五音旋律 [11 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls-宇宙无敌小钢蛋 [15 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls (Bonus Track)-少女时代 [30 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls-DJ新文 [13 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls (Remix)-小美人 [18 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girl-Jazz Guitar Club [37 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girl (0.8x)-J-I-E [11 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls (降调0.8x)-常在梦里的人 [13 MB]
+2022/08/28 20:29:53 Downloading: Beautiful Girls (0.9x)-乔一魚 [30 MB]
+2022/08/28 20:29:57 Downloading: Beautiful Girl-DJ铁柱 [11 MB]
+2022/08/28 20:29:57 Downloading: Beautiful Girl-郭富城 [20 MB]
+2022/08/28 20:29:58 Downloading: beautiful girls (Gustixa Remix)-fawlin [29 MB]
+2022/08/28 20:30:00 Downloading: Beautiful Girl (Explicit)-DJake [18 MB]
+2022/08/28 20:30:02 Downloading: Beautiful Girls-xxxCr3 [11 MB]
+2022/08/28 20:30:02 Downloading: Beautiful Girls-Danny Avila [22 MB]
+2022/08/28 20:30:04 Downloading: Beautiful Girls (Remix)-刘小蕊 [16 MB]
+2022/08/28 20:30:05 Downloading: Beautiful Girls (Re-Recorded)-Sean Kingston [26 MB]
+2022/08/28 20:30:05 Downloading: BEAUTIFUL GIRL-TEEN TOP [29 MB]
+2022/08/28 20:30:07 Downloading: Beautiful Girls-Van Halen [30 MB]
+2022/08/28 20:30:08 Downloading: Beautiful Girls (Live 1994)-David Lee Roth [17 MB]
+2022/08/28 20:30:09 Downloading: Beautiful Girls (Originally Performed by Sean Kingston) (Instrumental Version)-Backing Business [27 MB]
+2022/08/28 20:30:11 Downloading: Beautiful Girls (0.8X)-冠军 [12 MB]
+2022/08/28 20:30:15 Downloading: Beautiful Girl-Inxs [24 MB]
+2022/08/28 20:30:16 Downloading: Beautiful Girls (Andie Roy X Suntimechild Remix)-Andie Roy [13 MB]
+2022/08/28 20:30:17 Downloading: Beautiful Girl-The Hit Crew [25 MB]
+2022/08/28 20:30:17 Downloading: beautiful girls-fawlin [26 MB]
+2022/08/28 20:30:19 Downloading: Beautiful Girls (8-Bit Sean Kingston Emulation)-8-Bit Arcade [24 MB]
+2022/08/28 20:30:35 DOWNLOAD ALL DONE
+
+=>
 ```
 
 
