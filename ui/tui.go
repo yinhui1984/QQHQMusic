@@ -15,7 +15,7 @@ import (
 func AskForKeyword() {
 	for true {
 		utils.ClearScreen()
-		fmt.Println(utils.GreenText("输入关键词就行搜索: "))
+		fmt.Println(utils.GreenText("输入关键词进行搜索: "))
 		fmt.Print(utils.RedText("=> "))
 		reader := bufio.NewReader(os.Stdin)
 		keyWord, err := reader.ReadString('\n')
