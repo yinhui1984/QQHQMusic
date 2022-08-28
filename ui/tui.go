@@ -6,6 +6,7 @@ import (
 	"QQHQMusic/utils"
 	"bufio"
 	"fmt"
+	"github.com/dustin/go-humanize"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
 	"os"
@@ -53,8 +54,10 @@ func ShowSongList(songList []*song.Song) {
 			singer = s.Singer[0:22] + "..."
 		}
 
+		size := humanize.Bytes(uint64(s.BestSize))
+
 		t.AppendRow(table.Row{
-			i, title, singer, s.BestFormat, int(s.BestSize / 1024 / 1024), "《" + album + "》",
+			i, title, singer, s.BestFormat, size, "《" + album + "》",
 		})
 
 	}

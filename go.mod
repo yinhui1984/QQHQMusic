@@ -3,6 +3,7 @@ module QQHQMusic
 go 1.19
 
 require (
+	github.com/dustin/go-humanize v0.0.0-20171111073723-bb3d318650d4
 	github.com/jedib0t/go-pretty/v6 v6.3.7
 	github.com/sunmi-OS/gocore v1.5.13
 )

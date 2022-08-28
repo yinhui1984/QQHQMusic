@@ -3,6 +3,8 @@ package downloader
 import (
 	"QQHQMusic/song"
 	"QQHQMusic/utils"
+	"fmt"
+	"github.com/dustin/go-humanize"
 	"io"
 	"log"
 	"net/http"
@@ -74,11 +76,11 @@ func DownloadAll(list []*song.Song, toDir string) {
 }
 
 func workItemOfDownloadAll(s *song.Song, toDir string) {
-	Download(s, toDir)
+	Download(s, toDir, false)
 	<-queue
 }
 
-func Download(s *song.Song, toDir string) {
+func Download(s *song.Song, toDir string, showProgress bool) {
 
 	fileName := s.Title + "-" + s.Singer + "." + s.BestFormat
 
@@ -89,7 +91,10 @@ func Download(s *song.Song, toDir string) {
 	}
 
 	url := s.GetDownloadLink()
-	log.Println("Downloading: ", s.Title+"-"+s.Singer)
+	if "" == url {
+		return
+	}
+	log.Printf("Downloading: %s-%s [%s]\n", s.Title, s.Singer, humanize.Bytes(uint64(s.BestSize)))
 
 	resp, err := http.Get(url)
 	if err != nil {
@@ -116,15 +121,23 @@ func Download(s *song.Song, toDir string) {
 		}
 	}(file)
 
-	_, err = io.Copy(file, resp.Body)
+	if showProgress {
+		counter := &WriteCounter{}
+		_, err = io.Copy(file, io.TeeReader(resp.Body, counter))
+	} else {
+		_, err = io.Copy(file, resp.Body)
+	}
 	if err != nil {
 		log.Println("copy file error:" + err.Error())
 		return
 	}
 
 	if _, err := os.Stat(outputFile); err == nil {
-		log.Println("已下载: ", outputFile)
-		return
+		if showProgress {
+			fmt.Println(utils.GreenText("\n已下载: "), outputFile)
+		}
+	} else {
+		fmt.Println(utils.RedText("\nDownload Failed " + s.Title + "-" + s.Singer))
 	}
 
 }

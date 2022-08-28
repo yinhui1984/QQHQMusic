@@ -37,6 +37,9 @@ func (s *Song) Play() {
 	//log.Println(s.GetDownloadLink())
 
 	link := s.GetDownloadLink()
+	if "" == link {
+		return
+	}
 	log.Printf("准备播放 %s-%s, 获取链接:   %s\n", s.Title, s.Singer, link)
 
 	//ffplay -hide_banner
@@ -139,6 +142,10 @@ func (s *Song) getDownloadLinkSecondTry() string {
 	d := c[0].(map[string]interface{})
 	vkey = d["purl"].(string)
 
+	if "" == vkey {
+		log.Println("SORRY, can not get url of this song: " + s.Title)
+		return ""
+	}
 	return fmt.Sprintf(`http://ws.stream.qqmusic.qq.com/%s&fromtag=140`, vkey)
 }
 
@@ -191,8 +198,7 @@ func fixSongChars(str string) string {
 		"》", "]",
 		"【", "[",
 		"】", "]",
-		"’", "'",
-		" ", "")
+		"’", "'")
 
 	return r.Replace(str)
 }

@@ -64,7 +64,7 @@ func (down DownloadCommand) Execute(str string, songList []*song.Song) bool {
 		}
 
 		s := songList[index]
-		downloader.Download(s, downloader.GetDownloadFolderForSingleSong())
+		downloader.Download(s, downloader.GetDownloadFolderForSingleSong(), true)
 	}
 
 	return false
@@ -77,6 +77,7 @@ func (downAll DownloadAllCommand) Execute(str string, songList []*song.Song) boo
 
 	if "da" == str {
 		downloader.DownloadAll(songList, downloader.GetDownloadFolderForAllSongs())
+		return true
 	}
 
 	return false
