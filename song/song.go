@@ -42,8 +42,8 @@ func (s *Song) Play() {
 	}
 	log.Printf("准备播放 %s-%s, 获取链接:   %s\n", s.Title, s.Singer, link)
 
-	//ffplay -hide_banner
-	cmd := exec.Command("ffplay", link)
+	//ffplay  -nodisp -loglevel -8 -autoexit
+	cmd := exec.Command("ffplay", "-autoexit", link)
 	err := cmd.Run()
 	if err != nil {
 		log.Println("ERROR when play: " + err.Error())

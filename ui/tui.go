@@ -10,7 +10,9 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
 	"os"
+	"os/signal"
 	"strings"
+	"syscall"
 )
 
 func AskForKeyword() {
@@ -107,4 +109,18 @@ func AskForCommand(songList []*song.Song) {
 		DownloadAllCommand{}.Execute(input, songList)
 
 	}
+}
+
+func HandleCtrlC() {
+	c := make(chan os.Signal)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	go func() {
+		for {
+			select {
+			case <-c:
+				fmt.Println(utils.RedText("\n\nBYE!\n"))
+				os.Exit(0)
+			}
+		}
+	}()
 }
