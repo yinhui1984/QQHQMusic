@@ -12,7 +12,6 @@ import (
 	"os"
 	"os/signal"
 	"strings"
-	"syscall"
 )
 
 func AskForKeyword() {
@@ -113,7 +112,7 @@ func AskForCommand(songList []*song.Song) {
 
 func HandleCtrlC() {
 	c := make(chan os.Signal)
-	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	signal.Notify(c, os.Interrupt)
 	go func() {
 		for {
 			select {

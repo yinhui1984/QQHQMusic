@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"errors"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"strconv"
 )
@@ -19,7 +18,7 @@ func getCookie() (string, error) {
 	appVersion := "7.1.2"
 
 	toEncrypt := uid + deviceModel + deviceBrand + systemVersion + appVersion + versionCode
-	key := ("QMD" + "F*ckYou!")[0:8]
+	key := ("QMD" + "F*ckYou!")[0:8] //你没看错, 密码就是这么粗鲁!  https://github.com/QiuChenly/QQFlacMusicDownloader/blob/main/DecompileFiles/main.java#L32
 	encIP := EncryptDES(toEncrypt, key)
 
 	response, err := http.Post("http://8.136.185.193/api/Cookies",
@@ -40,7 +39,7 @@ func getCookie() (string, error) {
 		return "", errors.New("RESPONSE ERROR when getCookie:" + strconv.Itoa(response.StatusCode))
 	}
 
-	body, err := ioutil.ReadAll(response.Body)
+	body, err := io.ReadAll(response.Body) //ioutil.ReadAll(response.Body)
 	if err != nil {
 		return "", errors.New("READ ERROR when getCookie:" + err.Error())
 	}
