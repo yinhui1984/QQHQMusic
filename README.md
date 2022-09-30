@@ -1,5 +1,11 @@
 # QQHQMusic
- QQ音乐高品质下载 以`flac`为主
+ 
+
+>  注: 已经BBQ了:  用到的服务: https://github.com/OJZen/QMD_Android 已经停止服务.
+
+
+
+QQ音乐高品质下载 以`flac`为主
 
 
 

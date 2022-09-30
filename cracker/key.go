@@ -16,7 +16,7 @@ func init() {
 	cookie, err := getCookie()
 
 	if err != nil {
-		log.Fatal("ERROR when get cookie, quit...")
+		log.Fatal("ERROR when get cookie : ", err.Error())
 	}
 
 	//log.Println("cookie: " + cookie)
